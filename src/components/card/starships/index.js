@@ -21,22 +21,19 @@ const StarShips = () =>  {
 
     }, []);
 
-    const shipsJsx = () => {
-
-        const ships = starships.map(item => {
+        const shipsJsx  = starships.map(item => {
             return(
-                <div className='container' >
-                    <h2 >{item.name}</h2>  
+                <div className='container' key={item.name} >
+                    <h2  > {item.name}</h2>  
                 </div>
             )
         })
-        return ships
-    }
-    
+
   return (
     <div>
         <h1>Star Wars Starships</h1>
-        {shipsJsx()}
+        {shipsJsx}
+        
 
     </div>
   )
